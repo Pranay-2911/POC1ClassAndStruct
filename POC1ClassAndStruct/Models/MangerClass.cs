@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace POC1ClassAndStruct.Models
 {
-    internal class MangerClass
+    internal class MangerClass : EmployeeClass
     {
+        public override void PrintWork()
+        {
+            Console.WriteLine("Working");
+        }
     }
 }

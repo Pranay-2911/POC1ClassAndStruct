@@ -9,5 +9,10 @@ namespace POC1ClassAndStruct.Models
     internal class EmployeeClass
     {
         public int EmployeeId;
+
+        public virtual void PrintWork()
+        {
+            Console.WriteLine("Not Working");
+        }
     }
 }

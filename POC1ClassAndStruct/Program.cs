@@ -52,7 +52,7 @@ namespace POC1ClassAndStruct
             Console.WriteLine("Before Change in Struc1");
             Console.WriteLine($"Employee id of Struct 1 {employeStruct1.EmployeeId}");
             Console.WriteLine($"Employee id of Struct 2 {employeStruct2.EmployeeId}");
-            employeeClass1.EmployeeId = 50008;
+            employeStruct1.EmployeeId = 50008;
             Console.WriteLine("After Chnages");
             Console.WriteLine($"Employee id of Struct 1 {employeStruct1.EmployeeId}");
             Console.WriteLine($"Employee id of Struct 2 {employeStruct2.EmployeeId}");
@@ -61,8 +61,23 @@ namespace POC1ClassAndStruct
             Console.WriteLine("============ 4 Polymorphism =============");
             Console.WriteLine();
             Console.WriteLine("Classes support the polymorphism");
+            MangerClass mangerClass = new MangerClass();
+            mangerClass.PrintWork();
+            Console.WriteLine("Runtime Polymorphism Takes palce Which is function overriding");
+            Console.WriteLine();
+            Console.WriteLine("Struc do not support polymorphism \n" +
+                "through inheritance but can achieve polymorphism by implementing interfaces.");
+            Console.WriteLine("\n\n");
 
-
+            Console.WriteLine("============= 5 Inheritance =============");
+            Console.WriteLine();
+            Console.WriteLine("Class Support Inheritance");
+            mangerClass.EmployeeId = 2003;
+            Console.WriteLine("Manager id " + mangerClass.EmployeeId);
+            Console.WriteLine("Here we Access the Employeeid from the Parent class");
+            Console.WriteLine();
+            Console.WriteLine("Struct: Does not support inheritance in most languages.");
+            Console.WriteLine("We can achicev inheritance in Struct by using InterFaces");
         }
     }
 }
